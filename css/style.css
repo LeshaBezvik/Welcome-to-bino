@@ -5,6 +5,9 @@ body{
 body.lock{
     overflow: hidden;
 }
+h1,h2,h3{
+    margin: 0;
+}
 header{
    background: url(../img/b.png) no-repeat center top / cover;
 }
@@ -246,7 +249,6 @@ nav{
     margin-bottom: 0;
     padding: 70px 0 0 0;
 }
-
 /*------------------------------------------------OUR BLOG------------------------------------------------------*/
 .our-blog-container{
     display: flex;
@@ -378,7 +380,6 @@ nav{
     top: 8px;
     transform: rotate(45deg);
 }
-
 /*------------------------------------------------STATSTIC--------------------------------------------------*/
 .statistic{
     background: url(../img/people-bg.png) no-repeat center top / cover;
@@ -408,9 +409,7 @@ nav{
     font-weight: bold;
     padding: 40px 0 0 0;
 }
-
 /*------------------------------------------OUR PRICE--------------------------------------*/
-
 .pricing-container{
     flex-wrap: wrap;
     width: 100%;
@@ -447,6 +446,7 @@ nav{
     width: 150px;
     height: 150px;
     background-color: #F4F5F9;
+    opacity: 0.25098039215686274;
     top: -75px;
     left: 102px;
 }
@@ -501,21 +501,9 @@ nav{
     color: #E74C3C;
     transition: 0.2s linear;
 }
-
 /*------------------------------------------OUR TEAM----------------------------------------------*/
-
 .team{
-    background: url(../img/team-bg.png) no-repeat center top / cover;
-}
-.team-container{
-    background: url(../img/team-shape.png) no-repeat center top / cover;
-    height: 500px;
-    display: flex;
-}
-.team-line-img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    position: relative;
 }
 .our-team-title{
     color: #FFFFFF;
@@ -523,76 +511,113 @@ nav{
 .our-team-subtitle{
     color: #F4F5F9;
 }
-.team-photos-container{
-    width: 100%;
-    max-width: 1180px;
-    margin: auto;
-    height: 250px;
+.team-container{
+    background: url(../img/team-bg.png) no-repeat center top / cover ;
 }
-.team-photos{
+.team-shape{
+    background: url(../img/team-shape.png) no-repeat center top / cover ;
+    background-size: auto;
+}
+.team-line{
+    background: url(../img/team-line.png) no-repeat center top / cover ;
+    background-size: auto;
+    height: 652px;
+}
+.photos-container{
     display: flex;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-}
-.human{
-    position: relative;
-    width: 8%;
-}
-.human-image{
-    display: block;
-    border-radius: 50%;
-    border: 3px solid #E74C3C;
+    width: 80%;
     position: absolute;
-    z-index: 2;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.589);
+    top: 235px;
+    left: 15%;
+    height: 100px;
 }
-.human1{
-    bottom: 22px;
-}
-.human2{
-    bottom: 75px;
-}
-.human3{
-    bottom: 98px;
-}
-.human4{
-    bottom: 73px;
-}
-.human5{
-    bottom: 150px;
+.human-container{
+    width: 20%;
+    position: relative;
 }
 .human-info{
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-    width: 100px;
+    display: none;
     width: 150px;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #FFFFFF;
-    font-size: 14px;
+    height: 60px;
     text-align: center;
-}
-.img-hover:hover>div.human-info{
-    display: block;
-    color: #E5E5E5;
-}
-.human-info>h4{
-    text-transform: unset;
-    margin: 0;
-    padding-bottom: 10px;
+    position: absolute;
+    top: 150px;
+    left: -30px;
 }
 .human-info::before{
     content: "";
-    width: 40px;
-    height: 2px;
-    top: -28px;
-    left: 52px;
-    background-color: #FFFFFF;
     position: absolute;
+    top: -40px;
+    left: 50px;
+    width: 40px;
+    height: 1px;
+    background-color: #FFFFFF;
     transform: rotate(90deg);
 }
-
+.human-info>span{
+    font-size: 14px;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.human-info>h4{
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    color: #E74C3C;
+    margin: 0;
+    padding-bottom: 10px;
+}
+.human{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 5px solid #E74C3C;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+.human:hover .human-info{
+    display: block;
+}
+.human:hover {
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.877);
+}
+.human1{
+    background: url(../img/human1.png) no-repeat top / cover;
+    top: 92%;
+}
+.human1:hover{
+    top: 70%;
+}
+.human2{
+    background: url(../img/human2.png) no-repeat top / cover;
+    top: 54%;
+}
+.human2:hover{
+    top: 34%;
+}
+.human3{
+    background: url(../img/human3.png) no-repeat top / cover;
+    top: 48%;
+}
+.human3:hover{
+    top: 28%;
+}
+.human4{
+    background: url(../img/human4.png) no-repeat top / cover;
+    top: 82%;
+}
+.human4:hover{
+    top: 62%;
+}
+.human5{
+    background: url(../img/human5.png) no-repeat top / cover;
+    top: 80%;
+}
+.human5:hover{
+    top: 60%;
+}
 /*----------------------------------------KEEP IN TOUCH--------------------------------------------*/
 .kit-container{
     padding-bottom: 50px;
@@ -653,9 +678,7 @@ form, .contacts-content{
 .kit-btn{
     background-color: #E74E3E;
 }
-
 /*----------------------------------------FOOTER------------------------------------------------*/
-
 footer{
     background-color: #202020;
 }
@@ -675,8 +698,6 @@ footer{
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
-
-
 /*----------------------------------------------ADAPTIVE----------------------------------------------------*/
 @media (min-width: 1440px){
     .blog-item-subtitle{
@@ -692,7 +713,6 @@ footer{
         font-size: 18px;
     }
 }
-
 @media screen and (max-width: 1199px){
     nav, .statistic-container, .pricing-container, 
     .kit-container, .footer-container, .team-photos-container{
@@ -738,19 +758,15 @@ footer{
     }
     /*-----------------------------------------------OUR TEAM 1199---------------------------------*/
     .human1{
-        bottom: 51px;
+        top: 68%;
     }
-    .human3 {
-        bottom: 100px;
-    }
-    .human4{
-        bottom: 71px;
+    .human2 {
+        top: 54%;
     }
     .human5{
-        bottom: 107px;
+        top: 92%;
     }
 }
-
 @media screen and (max-width: 991px) {
     nav, .statistic-container, .pricing-container, 
     .kit-container, .footer-container, .team-photos-container{
@@ -830,17 +846,19 @@ footer{
     .pricing-text{
         padding-top: 0;
     }
-    /*---------------------------------------OUR TEAM 991-----------------------------*/
+    /*-----------------------------------OUR TEAM 991----------------------------------*/
     .human1{
-        bottom: 77px;
+        top: 59%;
     }
     .human2{
-        bottom: 88px;
+        top: 49%;
     }
-    .human5{
-        bottom: 78px;
+    .human3{
+        top: 52%;
     }
-    
+    .human4{
+        top: 75%;
+    }
     /*-----------------------------------------KEEP IN TOUCH 991-------------------------*/
     .contacts-block, .form-block{
         height: 500px;
@@ -861,7 +879,6 @@ footer{
         font-size: 15px;
     }
 }
-
 @media screen and (max-width: 767px) {
     nav, .statistic-container, .pricing-container, 
     .kit-container, .footer-container, .team-photos-container{
@@ -884,7 +901,7 @@ footer{
     .blog-item-link{
         font-size: 12px;
     }
-    /*--------------------------------MENU BURGER--------------------------------*/
+    /*--------------------------------MENU BURGER 767--------------------------------*/
     nav{
         align-items: center;
     }
@@ -923,12 +940,10 @@ footer{
     .menu-burger.active span{
     transform: scale(0) ;    
     }
-
     .menu-burger.active::before{
         top: 50%;
         transform: rotate(-45deg) translate(0px, -50%);
     }
-
     .menu-burger.active::after{
         bottom: 50%;
         transform: rotate(45deg) translate(0px, 50%);
@@ -957,7 +972,6 @@ footer{
     .menu>li>a{
         font-size: 24px;
     }
-    
     /*-----------------------------------------HEADER 767-----------------------------*/
     .header-title{
         font-size: 43px;
@@ -968,7 +982,6 @@ footer{
     .header-buttons{
         width: 80%;
     }
-
     /*--------------------------------------OUR BLOG 767--------------------------------*/
     .our-blog-container{
         flex-wrap: wrap;
@@ -977,7 +990,6 @@ footer{
         width: 80%;
         margin: auto;
     }
-
     /*----------------------------------------STATISTIC 767-------------------------------*/
     .statistic-container {
         padding: 65px 0;
@@ -989,7 +1001,6 @@ footer{
         font-size: 25px;
         padding: 30px 0 0 0;
     }
-
     /*------------------------------------PRICING 767-------------------------------------------*/
     .pricing-item-header{
         height: 100px;
@@ -1020,30 +1031,30 @@ footer{
     .pricing-btn{
         width: 120px;
     }
-
     /*--------------------------------------OUR TEAM 767------------------------------------*/
-    .team-container{
-        height: 300px;
+    .human-info{
+        top: 120px;
+        left: -37px;
     }
-    .human-image{
-        width: 40px;
+    .human:hover {
+        width: 60px;
+        height: 60px;
     }
     .human1{
-        bottom: 88px;
+        left: -27%;
+        top: 56%;
+    }
+    .human1:hover{
+        top: 70px;
     }
     .human2{
-        width: 55px;
+        top: 49%;
+    }
+    .human3{
+        top: 52%;
     }
     .human4{
-        bottom: 87px;
-    }
-    .human5{   
-        bottom: 94px;
-        left: -5px;
-    }
-    .human-info{
-        bottom: 13px;
-        left: -38px;
+        top: 75%;
     }
     /*-------------------------------------KEEP IN TOUCH 767-------------------------------*/
     form, .contacts-content {
@@ -1060,7 +1071,6 @@ footer{
     .contacts-content>div>p{
         font-size: 13px;
     }
-
     /*------------------------------------FOOTER 767-----------------------------------*/
     .icons>a {
         padding: 0 10px 0 0;
@@ -1070,10 +1080,15 @@ footer{
         left: 56px;
         width: 24px;
     }
-    
-    
 }
-
+@media (max-width: 585px){
+    .human4 {
+        top: 67%;
+    }
+    .human5 {
+        top: 81%;
+    }
+}
 @media(max-width: 480px){
     /*-------------------------------------HEADER 480------------------------------------*/
     .block-header{
@@ -1193,7 +1208,6 @@ footer{
     .statistic-text{
         font-size: 12px;
     }
-
     /*-------------------------------------PRICING 480-------------------------------------*/
     .pricing-container{
         width: 100%;
@@ -1244,36 +1258,40 @@ footer{
     }
     .pricing-button{
         padding: 18px;
-}
+    }
     .pricing-btn{
         width: 120px;
     }
     /*--------------------------------------OUR TEAM 480---------------------------------*/
-    .team-container{
-        height: 250px;
+    .team-line{
+        height: 430px;
     }
-    .human-image{
+    .human{
         width: 35px;
+        height: 35px;
+        border: 3px solid #E74C3C;
     }
-    .human2{
-        width: 45px;
-        bottom: 102px;
-        left: -3px;
+    .human:hover {
+        width: 50px;
+        height: 50px;
     }
     .human1{
-        bottom: 98px;
-        left: 5px;
+        left: -10px;
+    }
+    .human2{
+        top: 58%;
+        left: -18%;
     }
     .human3{
-        bottom: 106px;
+        top: 61%;
+        left: -15%;
     }
     .human4{
-        bottom: 94px;
-        left: -9px;
+        top: 68%;
+        left: -13%;
     }
     .human5{
-        bottom: 102px;
-        left: -20px;
+        top: 76%;
     }
     .human-info {
         bottom: 40px;
